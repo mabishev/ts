@@ -1,10 +1,10 @@
 package piscine
 
 import (
-	"fmt"
 	"os"
 )
 
+// Побитовый сдвиг
 const (
 	MinInt64 = -1 << 63
 	MaxInt64 = 1<<63 - 1
@@ -58,20 +58,20 @@ func nothing(a, b int) string {
 }
 
 func add(a, b int) string {
-	if a > 0 && b > MaxInt64-a { // 5  4 > 9-5
+	if a > 0 && b > MaxInt64-a {
 		return ""
 	}
-	if a < 0 && b < MinInt64-a { // -5 -5 < -10 - -5
+	if a < 0 && b < MinInt64-a {
 		return ""
 	}
 	return Itoa(a + b)
 }
 
 func substract(a, b int) string {
-	if a > 0 && b < a-MaxInt64 { // 5 - -4 < 5-9
+	if a > 0 && b < a-MaxInt64 {
 		return ""
 	}
-	if a < 0 && b > a-MinInt64 { // -5 - 5 > 5
+	if a < 0 && b > a-MinInt64 {
 		return ""
 	}
 	return Itoa(a - b)
@@ -131,7 +131,6 @@ func Atoi(s string) (int, bool) {
 		}
 		n *= 10
 		n -= int(r - '0')
-		fmt.Println(n, "??")
 	}
 
 	if negative {
