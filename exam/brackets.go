@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// Используем стэк
 func matchBrackets(exp string) bool {
 	runes := []rune(exp)
 	var opened []rune
