@@ -37,7 +37,7 @@ func matchBrackets(exp string) bool {
 	return len(opened) == 0
 }
 
-func main() {
+func Brackets() {
 	if len(os.Args) == 1 {
 		fmt.Println()
 	} else {
