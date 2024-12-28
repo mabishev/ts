@@ -1,4 +1,4 @@
-package piscine
+package ts
 
 import (
 	"os"
